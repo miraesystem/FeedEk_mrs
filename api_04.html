@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,  target-densitydpi=160dpi">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script>
+var nav1 = "API";
+var nav2 = "네이버블로그";
+document.title ="<? include('inc/title.html'); ?> :: " + nav1 + " > " + nav2 ;
+
+</script>
+<meta name="publisher" content="미래시스템 www.web25.co.kr" />
+<meta name="copyright" content="미래시스템 www.web25.co.kr" />
+<meta name="description" content="미래시스템 홈페이지입니다."> 
+<meta name="keywords" content="컴퓨터,윈도우,인터넷">
+<!--
+<meta property="og:type" content="website">
+<meta property="og:title" content="미래시스템">
+<meta property="og:description" content="미래시스템에서 제작한 홈페이지입니다.">
+<meta property="og:image" content="http://www.driveworld.kr/og_image.png">
+<meta property="og:url" content="http://www.driveworld.kr/">
+-->
+
+<meta name="Robots" content="INDEX, FOLLOW">
+
+<link href="css/sub_layout.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/bbs.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.7.1.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+<script>
+$("meta[name='description']").attr("content",$('title').text());
+$("meta[name='keywords']").attr("content",nav1+", "+nav2);
+
+</script>
+</head>
+<body class="bg">
+
+
+	
+	
+<!--header -->
+	<div id="header">
+	<? include("inc/header.html"); ?>
+	</div>
+	
+<!--//header -->
+	
+	<div class="visual"><img src="images/visual_sub_01.jpg"></div>
+
+
+
+
+	<div id="container">
+		
+<!--snb -->
+		<div class="snb">
+			<div class="menu">
+			<span id="title"></span>
+			<? include("inc/nav_api.html"); ?>
+			</div>
+		
+		<script>
+		
+			$("#sm li.no4").eq(0).addClass("on");
+			var title = document.getElementById("title");
+			title.innerHTML = nav1;
+		   </script>
+		   
+		    <? include("inc/banner.html"); ?>
+		</div>
+		
+<!--//snb -->
+
+
+
+
+<!--content -->
+		<div id="content">
+		
+			<div class="titleArea">
+				<h1 id="subtitle"></h1>
+				<div id="map">HOME &gt;  <span></span> &gt;  <strong><span></span></strong></div>
+				<script>
+				 var map1 = document.getElementById("map").getElementsByTagName("span")[0];
+				 var map2 = document.getElementById("map").getElementsByTagName("span")[1];
+				 var map3 = document.getElementById("subtitle");
+				 map1.innerHTML = nav1;
+				 map2.innerHTML = nav2;
+				 map3.innerHTML = nav2;
+				 </script>
+			   </div>
+			
+			<div class="wrapper">
+			
+		<!-- http://jquery-plugins.net/FeedEk/FeedEk.html	-->
+	
+		<script type="text/javascript" src="js/FeedEk.js"></script>
+
+		
+			<div id="divRss"></div>
+
+
+		    
+		    
+		    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#divRss').FeedEk({
+            FeedUrl: 'mat-zip.blogspot.com/feeds/posts/default?alt=rss',
+            MaxCount: 2,
+		  DescCharacterLimit: 500
+		  
+        });
+    })
+
+		</script>
+
+			
+			
+			
+			</div>
+		</div>
+		
+<!--//content -->
+	
+	
+	
+	
+		
+
+	</div>
+	
+<!--//container -->
+	
+	
+	
+	
+	
+<!--footer -->
+	<div id="footer">
+		<? include("inc/footer.html"); ?>
+	</div>
+	
+<!--//footer -->
+
+
+</body>
+</html>
